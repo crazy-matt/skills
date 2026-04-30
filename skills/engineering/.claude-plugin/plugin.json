@@ -1,0 +1,15 @@
+{
+  "name": "engineering",
+  "description": "Daily code work skills",
+  "skills": [
+    "./diagnose",
+    "./grill-with-docs",
+    "./improve-codebase-architecture",
+    "./setup-matt-pocock-skills",
+    "./tdd",
+    "./to-issues",
+    "./to-prd",
+    "./triage",
+    "./zoom-out"
+  ]
+}

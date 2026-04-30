@@ -37,6 +37,47 @@ npx skills@latest add mattpocock/skills
 
 4. Bam - you're ready to go.
 
+## Install via Claude Code Marketplace
+
+This repo also ships as a Claude Code plugin marketplace. Add the catalog once, then install whichever bundle you want:
+
+```bash
+# add the marketplace (one-time)
+/plugin marketplace add crazy-matt/skills
+
+# install everything
+/plugin install all@crazy-matt
+
+# or pick a category
+/plugin install engineering@crazy-matt
+/plugin install productivity@crazy-matt
+/plugin install misc@crazy-matt
+```
+
+Pick **one** install path — `all` overlaps with the per-category plugins. To pull updates later, run `/plugin marketplace update crazy-matt`.
+
+Or manually in `~/.claude/settings.json` (use `<repo>/.claude/settings.json` for a project-scoped install):
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "crazy-matt": {
+      "source": {
+        "source": "github",
+        "repo": "crazy-matt/skills"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "all@crazy-matt": true
+  }
+}
+```
+
+`extraKnownMarketplaces` registers the catalog so you skip `/plugin marketplace add`. `enabledPlugins` records which plugins should stay active across sessions (key format: `plugin-name@marketplace-name`).
+
+Settings declare configuration only — you still run `/plugin install all@crazy-matt` once to fetch the plugin contents. The win is reproducibility: the file can live in your dotfiles repo or be shared with a team via the project-scoped settings.
+
 ## Why These Skills Exist
 
 I built these skills as a way to fix common failure modes I see with Claude Code, Codex, and other coding agents.

@@ -6,7 +6,15 @@ Skills are organized into bucket folders under `skills/`:
 - `personal/` — tied to my own setup, not promoted
 - `deprecated/` — no longer used
 
-Every skill in `engineering/`, `productivity/`, or `misc/` must have a reference in the top-level `README.md` and an entry in `.claude-plugin/plugin.json`. Skills in `personal/` and `deprecated/` must not appear in either.
+Every skill in `engineering/`, `productivity/`, or `misc/` must:
+
+- have a reference in the top-level `README.md`
+- be listed in the root `.claude-plugin/plugin.json` (the `all` plugin)
+- be listed in its bucket's `<bucket>/.claude-plugin/plugin.json` (the per-category plugin)
+
+Skills in `personal/` and `deprecated/` must not appear in any of the above.
+
+The marketplace catalog is defined in `.claude-plugin/marketplace.json` and exposes four plugins: `all`, `engineering`, `productivity`, `misc`. When adding a new bucket, add an entry to `marketplace.json` and create a `<bucket>/.claude-plugin/plugin.json` for it.
 
 Each skill entry in the top-level `README.md` must link the skill name to its `SKILL.md`.
 

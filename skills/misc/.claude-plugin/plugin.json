@@ -1,0 +1,10 @@
+{
+  "name": "misc",
+  "description": "Kept around but rarely used",
+  "skills": [
+    "./git-guardrails-claude-code",
+    "./migrate-to-shoehorn",
+    "./scaffold-exercises",
+    "./setup-pre-commit"
+  ]
+}

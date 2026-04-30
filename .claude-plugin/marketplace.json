@@ -1,0 +1,30 @@
+{
+  "name": "crazy-matt",
+  "description": "Matt Pocock's Claude Code skills, packaged as a marketplace by crazy-matt",
+  "owner": {
+    "name": "Matt Pocock",
+    "url": "https://github.com/mattpocock"
+  },
+  "plugins": [
+    {
+      "name": "all",
+      "source": "./",
+      "description": "Every public skill in one go (engineering + productivity + misc)"
+    },
+    {
+      "name": "engineering",
+      "source": "./skills/engineering",
+      "description": "Daily code work skills"
+    },
+    {
+      "name": "productivity",
+      "source": "./skills/productivity",
+      "description": "Daily non-code workflow skills"
+    },
+    {
+      "name": "misc",
+      "source": "./skills/misc",
+      "description": "Kept around but rarely used"
+    }
+  ]
+}
