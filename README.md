@@ -37,6 +37,47 @@ npx skills@latest add mattpocock/skills
 
 4. Bam - you're ready to go.
 
+## Install via Claude Code Marketplace
+
+This repo also ships as a Claude Code plugin marketplace. Add the catalog once, then install whichever bundle you want:
+
+```bash
+# add the marketplace (one-time)
+/plugin marketplace add mattpocock/skills
+
+# install the default bundle (engineering + productivity, same as the npx install)
+/plugin install mattpocock-skills@mattpocock
+
+# or pick a category — `misc` is only available via the marketplace
+/plugin install engineering@mattpocock
+/plugin install productivity@mattpocock
+/plugin install misc@mattpocock
+```
+
+`mattpocock-skills` overlaps with `engineering` and `productivity` — pick one or the other to avoid duplicates. `misc` doesn't overlap and is safe to combine with anything. To pull updates later, run `/plugin marketplace update mattpocock`.
+
+Or manually in `~/.claude/settings.json` (use `<repo>/.claude/settings.json` for a project-scoped install):
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "mattpocock": {
+      "source": {
+        "source": "github",
+        "repo": "mattpocock/skills"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "mattpocock-skills@mattpocock": true
+  }
+}
+```
+
+`extraKnownMarketplaces` registers the catalog so you skip `/plugin marketplace add`. `enabledPlugins` records which plugins should stay active across sessions (key format: `plugin-name@marketplace-name`).
+
+Settings declare configuration only — you still run `/plugin install mattpocock-skills@mattpocock` once to fetch the plugin contents. The win is reproducibility: the file can live in your dotfiles repo or be shared with a team via the project-scoped settings.
+
 ## Why These Skills Exist
 
 I built these skills as a way to fix common failure modes I see with Claude Code, Codex, and other coding agents.

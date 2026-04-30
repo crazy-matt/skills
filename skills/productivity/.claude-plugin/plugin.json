@@ -1,0 +1,9 @@
+{
+  "name": "productivity",
+  "description": "Daily non-code workflow skills",
+  "skills": [
+    "./caveman",
+    "./grill-me",
+    "./write-a-skill"
+  ]
+}
