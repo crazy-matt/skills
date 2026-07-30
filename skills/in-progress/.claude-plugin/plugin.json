@@ -1,0 +1,15 @@
+{
+  "name": "in-progress",
+  "description": "[skills bucket] Skills that are still being developed. They're not ready to ship — expect rough edges, breaking changes, and abandoned experiments. They're excluded from the plugin and the top-level README until they graduate to a stable bucket.",
+  "skills": [
+    "./batch-grill-me",
+    "./claude-handoff",
+    "./loop-me",
+    "./setup-ts-deep-modules",
+    "./to-questionnaire",
+    "./wizard",
+    "./writing-beats",
+    "./writing-fragments",
+    "./writing-shape"
+  ]
+}

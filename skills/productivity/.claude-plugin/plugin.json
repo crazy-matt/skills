@@ -1,0 +1,11 @@
+{
+  "name": "productivity",
+  "description": "[skills bucket] General workflow tools, not code-specific.",
+  "skills": [
+    "./grilling",
+    "./grill-me",
+    "./handoff",
+    "./teach",
+    "./writing-great-skills"
+  ]
+}

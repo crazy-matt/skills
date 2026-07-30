@@ -1,0 +1,10 @@
+{
+  "name": "misc",
+  "description": "[skills bucket] Tools I keep around but rarely use — not promoted in the plugin.",
+  "skills": [
+    "./git-guardrails-claude-code",
+    "./migrate-to-shoehorn",
+    "./scaffold-exercises",
+    "./setup-pre-commit"
+  ]
+}

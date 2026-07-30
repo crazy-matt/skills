@@ -1,0 +1,23 @@
+{
+  "name": "engineering",
+  "description": "[skills bucket] Skills I use daily for code work.",
+  "skills": [
+    "./ask-matt",
+    "./codebase-design",
+    "./code-review",
+    "./diagnosing-bugs",
+    "./domain-modeling",
+    "./grill-with-docs",
+    "./implement",
+    "./improve-codebase-architecture",
+    "./prototype",
+    "./research",
+    "./resolving-merge-conflicts",
+    "./setup-matt-pocock-skills",
+    "./tdd",
+    "./to-spec",
+    "./to-tickets",
+    "./triage",
+    "./wayfinder"
+  ]
+}
