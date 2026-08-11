@@ -14,7 +14,7 @@ fi
 git checkout main
 git fetch upstream
 git reset --hard upstream/main
-git checkout main@{1} -- scripts/generate-plugin-manifests.sh
+git checkout main@{1} -- scripts/generate-plugin-manifests.sh .github/workflows/sync-upstream.yml
 
 bucket_desc() {
   local readme="skills/$1/README.md"

@@ -1,0 +1,33 @@
+name: Sync upstream
+
+on:
+  schedule:
+    - cron: '0 5 * * *'
+  workflow_dispatch:
+
+concurrency: ${{ github.workflow }}
+
+jobs:
+  sync:
+    name: Regenerate plugin manifests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.SYNC_TOKEN }}
+
+      - name: Sync
+        run: |
+          git remote add upstream https://github.com/mattpocock/skills.git
+          git fetch upstream --tags --force
+          release=$(git describe --tags --abbrev=0 upstream/main)
+          if git merge-base --is-ancestor "$release" HEAD^; then
+            echo "No release newer than $release."
+            exit 0
+          fi
+          echo "Syncing for $release."
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          scripts/generate-plugin-manifests.sh
